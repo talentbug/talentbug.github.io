@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    overflow: hidden;
+}
+
+/* 第一屏样式 */
+
+.logo {
+    width: 251px;
+    height: 186px;
+    margin: 0 auto;
+}
+
+.txt {
+    height: 100px;
+    text-align: center;
+    margin: 80px auto;
+}
+
+.txt img {
+    margin: 0 40px;
+    opacity: 0.2;
+    transition: margin 0.6s, opacity .6s;
+}
+
+.intro {
+    background: url(../images/info_1.png);
+    width: 772px;
+    height: 49px;
+    margin: 0 auto;
+}
+
+.first.current .txt img {
+    margin: 0 6px;
+    opacity: 1;
+}
+
+/* 第二屏样式 */
+
+.second>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second .shield {
+    width: 440px;
+    font-size: 0;
+}
+
+.second .info {
+    width: 635px;
+    height: 309px;
+    background: url(../images/p2.png);
+}
+
+.second .shield>img {
+    transition: transform 1s;
+}
+
+.second .shield>img:nth-of-type(1) {
+    transform: translate(150px, 120px) rotate(60deg);
+}
+
+.second .shield>img:nth-of-type(2) {
+    transform: translate(-260px, -190px) rotate(90deg);
+}
+
+.second .shield>img:nth-of-type(3) {
+    transform: translate(170px, 130px) rotate(120deg);
+}
+
+.second .shield>img:nth-of-type(4) {
+    transform: translate(180px, 110px) rotate(140deg);
+}
+
+.second .shield>img:nth-of-type(5) {
+    transform: translate(-160px, -80px) rotate(70deg);
+}
+
+.second .shield>img:nth-of-type(6) {
+    transform: translate(60px, 35px) rotate(10deg);
+}
+
+.second .shield>img:nth-of-type(7) {
+    transform: translate(-185px, -155px) rotate(50deg);
+}
+
+.second .shield>img:nth-of-type(8) {
+    transform: translate(-160px, -85px) rotate(130deg);
+}
+
+.second .shield>img:nth-of-type(9) {
+    transform: translate(145px, 120px), rotate(90deg);
+}
+
+.second.current .shield>img {
+    transform: none;
+}
+
+/* 第三屏样式 */
+
+.container {
+    position: relative;
+    width: 1500px;
+    height: 75%;
+    margin: 0 auto;
+}
+
+.third .info {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(0, -50%);
+}
+
+.third .circle {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translate(0, -50%);
+}
+
+.circle .rocket {
+    position: absolute;
+    top: 1300px;
+    left: -650px;
+    transition: all .6s;
+}
+
+.third.current .circle .rocket {
+    top: 125px;
+    left: 125px;
+}
+
+/* 第四屏样式 */
+
+.fourth {
+    position: relative;
+}
+
+.fourth .search {
+    width: 529px;
+    height: 438px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-115%, -50%);
+}
+
+.fourth .searchbar {
+    width: 529px;
+    height: 66px;
+    background: url(../images/search.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .3s;
+    transform: translate(-300%, 0);
+}
+
+.search .searchrresult {
+    margin-top: 60px;
+    width: 529px;
+    height: 0;
+    background: url(../images/result.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fourth.current .searchbar {
+    transform: none;
+}
+
+.fourth .searchtext {
+    width: 0;
+    height: 22px;
+    background: url(../images/key.png) no-repeat;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+
+.fourth.current .search>.searchtext {
+    width: 99px;
+    transition: width 1s 1s steps(5);
+}
+
+.fourth.current .search>.searchrresult {
+    height: 372px;
+    transition: height 1s 2.5s;
+}
+
+.fourth .info {
+    width: 612px;
+    height: 299px;
+    background: url(../images/info_4.png);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(100%, -50%);
+}
+
+/* 第五屏样式 */
+
+.fifth {
+    position: relative;
+}
+
+.fifth .info {
+    width: 1077px;
+    height: 134px;
+    background: url(../images/info_5.png) no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%, 0);
+}
+
+.fifth .theme {
+    width: 1004px;
+    height: 550px;
+    position: absolute;
+    transition: transform 1s;
+}
+
+/* 背景色 */
+
+.fifth .bgc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    background-color: rgba(255, 255, 255, .1);
+}
+
+/* 顶部边线飞入 */
+
+.fifth .theme-t {
+    border-top: 1px solid #ccc;
+    top: 50%;
+    right: 50%;
+    transform: translate(550%, -35%);
+}
+
+.fifth.current .theme-t {
+    transform: translate(50%, -35%);
+}
+
+/* 浏览器功能界面 */
+
+.fifth .line-t {
+    width: 920px;
+    height: 25px;
+    position: absolute;
+    top: 207px;
+    left: 50%;
+    transform: translate(-547%, 0);
+    border: 1px solid #ccc;
+    transition: transform 1s 1s steps(15);
+}
+
+.fifth.current .interface>.line-t {
+    transform: translate(-47%, 0);
+}
+
+.fifth .interface-t {
+    width: 1004px;
+    height: 79px;
+    background: url(../images/toolbar.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -1245%);
+    transition: transform 1s 1s steps(15);
+}
+
+.fifth.current .interface>.interface-t {
+    transform: translate(-50%, -245%);
+}
+
+.fifth .line-b {
+    width: 1004px;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    bottom: 40px;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+
+.fifth .interface-b {
+    width: 394px;
+    height: 29px;
+    background: url(../images/extra.png) no-repeat;
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translate(1125%, 0);
+    transition: transform 1s 1s steps(15);
+}
+
+.fifth.current .interface>.interface-b {
+    transform: translate(125%, 0);
+}
+
+/* 底部边线飞入 */
+
+.fifth .theme-b {
+    border-bottom: 1px solid #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-550%, -35%);
+}
+
+.fifth.current .theme-b {
+    transform: translate(-50%, -35%);
+}
+
+/* 左边线飞入 */
+
+.fifth .theme-l {
+    border-left: 1px solid #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -350%);
+}
+
+.fifth.current .theme-l {
+    transform: translate(-50%, -35%);
+}
+
+/* 右边线飞入 */
+
+.fifth .theme-r {
+    border-right: 1px solid #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 350%);
+}
+
+.fifth.current .theme-r {
+    transform: translate(-50%, -35%);
+}
